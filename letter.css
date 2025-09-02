@@ -1,0 +1,347 @@
+:root {
+    /* 🎨 Palette */
+    --lavender-light: #E6E3FF;
+    --orange-medium: #FF9136;
+    --crimson-dark: #9C0038;
+    --pink-soft: #FFAACD;
+    --rose-deep: #B24763;
+    --lilac: #B7A4FF;
+    --yellow-pale: #FFF3A3;
+    --orange-bright: #FF7A00;
+    --peach-light: #FFE1DB;
+    --brick-red: #874747;
+    --peach-soft: #FFB38A;
+    --white: #FFFFFF;
+    --olive-dark: #5A5730;
+    --apricot-light: #FFD8A3;
+
+    /* ✍️ Typography */
+    --font-title: "envelove", sans-serif;
+    --font-text: "anona", sans-serif;
+
+    /* Font sizes (px/rem scale) */
+    --font-size-xxs: 10px;
+    /* 0.625rem */
+    --font-size-xs: 12px;
+    /* 0.75rem */
+    --font-size-sm: 14px;
+    /* 0.875rem */
+    --font-size-md: 16px;
+    /* 1rem */
+    --font-size-lg: 18px;
+    /* 1.125rem */
+    --font-size-xl: 20px;
+    /* 1.25rem */
+    --font-size-2xl: 24px;
+    /* 1.5rem */
+    --font-size-3xl: 30px;
+    /* 1.875rem */
+    --font-size-4xl: 36px;
+    /* 2.25rem */
+    --font-size-5xl: 48px;
+    /* 3rem */
+    --font-size-6xl: 60px;
+    /* 3.75rem */
+
+    /* 📏 Spacing */
+    --spacing-xxs: 2px;
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+    --spacing-3xl: 64px;
+
+    /* 🔲 Border radius */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-round: 9999px;
+    /* fully rounded */
+
+    /* 🌑 Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+    --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+body {
+    background-image: url(bg-3.svg);
+    background-repeat: repeat;
+    /* mặc định, lặp theo cả 2 chiều */
+    background-size: 6vw 6vw;
+    gap: 0;
+    /* giữ nguyên kích thước ảnh */
+
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#section1 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#section2 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#music {
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+#vinyl.spinning {
+    animation: spin 3s linear infinite;
+    transform-origin: center center;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+p {
+    font-family: var(--font-text);
+    font-size: var(--font-size-md);
+    color: var(--olive-dark);
+    text-align: center;
+    padding: var(--spacing-sm);
+}
+
+#frame {
+    position: absolute;
+    width: 30%;
+    top: -5%;
+    left: 10%;
+
+}
+
+#frame img {
+
+    width: 100%;
+
+
+}
+
+#back p {
+    width: 10%;
+    font-family: var(--font-text);
+    font-size: var(--font-size-lg);
+
+    color: black;
+    background-image: linear-gradient(to bottom, #FFFFFF, #EDD280);
+    margin: 2%;
+    border-radius: var(--radius-round);
+    border: 2px solid var(--olive-dark);
+    text-align: center;
+    position: fixed;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+a {
+
+    text-decoration: none;
+    color: inherit;
+}
+
+#frame img:hover,
+#line-1:hover {
+    transform: rotate(-10deg);
+    transition: ease-in-out 0.5s;
+}
+
+#an:hover {
+    transform: rotate(10deg);
+    transition: ease-in-out 0.5s;
+}
+
+.cherry img {
+    width: 10vw;
+    opacity: 0.1;
+}
+
+.cherry img:hover {
+    opacity: 1;
+    transition: ease-in-out 0.1s;
+}
+
+#line-1 {
+    position: absolute;
+    width: 25%;
+    top: 35%;
+    left: 55%;
+    padding: 2%;
+    background-color: #4689b4;
+    border: 2px solid var(--olive-dark);
+}
+
+#line-1 p {
+    color: var(--white);
+    margin: auto;
+}
+
+#line-1 span {
+    font-family: var(--font-title);
+    font-size: var(--font-size-6xl);
+    line-height: 0.2;
+}
+
+
+#an {
+    position: absolute;
+    width: 32%;
+    top: 40%;
+    left: 20%;
+}
+
+#cake {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+@media screen and (max-width: 1199px) and (min-width: 1024px) {
+   
+    #vinyl {
+        max-width: 30vw;
+    }
+
+    #frame {
+        top: 3%;
+        left: 20%;
+    }
+
+    #an {
+        position: absolute;
+        
+        top: 40%;
+        left: 10%;
+    }
+
+    #line-1 {
+        width: 40%;
+        left: 45%;
+    }
+
+
+}
+
+@media screen and (max-width: 1023px) {
+
+
+    #section2 {
+        height: 120vh;
+        margin-bottom: 10vh;
+    }
+
+    #vinyl {
+        max-width: 50vw;
+    }
+
+    #frame {
+        width: 60%;
+
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #an {
+        width: 50%;
+        top: 28%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #line-1 {
+        width: 70%;
+        top: 65%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 1px solid var(--olive-dark);
+
+    }
+
+    #cake {
+        width: 30vw;
+    }
+
+
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        background-repeat: repeat;
+        /* mặc định, lặp theo cả 2 chiều */
+        background-size: 22vw 22vw;
+    }
+
+    #section2 {
+        height: 120vh;
+        margin-bottom: 10vh;
+    }
+
+    #vinyl {
+        max-width: 80vw;
+    }
+
+    #frame {
+        width: 90%;
+
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #an {
+        width: 80%;
+        top: 28%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #line-1 {
+        width: 70%;
+        top: 65%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 1px solid var(--olive-dark);
+
+    }
+
+    #cake {
+        width: 30vw;
+    }
+
+    #line-1 p {
+        color: var(--white);
+        margin: auto;
+        font-size: var(--font-size-sm);
+    }
+
+    #line-1 span {
+        font-family: var(--font-title);
+        font-size: var(--font-size-4xl);
+        line-height: 0.2;
+    }
+    #back p {
+        width: 20%;
+        
+    }
+}

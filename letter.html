@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/jqo8rln.css">
+    <title>7-9-2025</title>
+    <link rel="stylesheet" href="letter.css">
+</head>
+
+<body>
+
+    <section id="section1">
+        <div id="back"><a href="index.html"><p>BACK</p></a></div>
+        <audio loop id="bg-music">
+            <source src="melting - kali uchis (sped up) - niouxxie.mp3" type="audio/mpeg">
+        </audio>
+        <div id="music">
+            <img id="vinyl" src="vinyl.png" />
+            <div><p>Click to play audio</p></div>
+        </div>
+    </section>
+    <section id="section2">
+
+        <div id="frame"><img src="hpbd.png" /></div>
+        <div id="line-1">
+            <p>I wish you a <span>cheerful</span> and <span>artful</span> life. </p>
+            <p>A new age starts, everything's gonna be fine, just keep going bro.</p>
+            <p>Haven’t heard from you for a while. There maybe something ups and downs but I believe you are strong and
+                brave enough to overcome. </p>
+            <p>Looking forward to seeing you one day.</p>
+            <p>By the way, I am not sure which song you are into right now. I just pick up a song at random, hope you
+                enjoy
+                it.</p>
+
+        </div>
+        <div>
+            <img id="an" src="an.png" />
+        </div>
+    </section>
+    <img id="cake" src="cake.png" />
+
+    <div class="cherry">
+        <img src="cherry.png" style="position:absolute; left: 80%; top: 20%" />
+        <img src="cherry.png" style="position:absolute; left: 45%; top: 36%" />
+        <img src="cherry.png" style="position:absolute; left: 20%; top: 75%" />
+        <img src="cherry.png" style="position:absolute; left: 66%; top: 115%" />
+        <img src="cherry.png" style="position:absolute; left: 15%; top: 150%" />
+    </div>
+    <script>
+        const audio = document.getElementById("bg-music");
+        const vinyl = document.getElementById("vinyl");
+        let isPlaying = false;
+
+        vinyl.addEventListener("click", () => {
+            if (!isPlaying) {
+                audio.play();
+                vinyl.classList.add("spinning");
+                isPlaying = true;
+            } else {
+                audio.pause();
+                vinyl.classList.remove("spinning");
+                isPlaying = false;
+            }
+        });
+    </script>
+
+</body>
+
+</html>
